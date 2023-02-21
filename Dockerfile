@@ -40,4 +40,6 @@ ADD script.py extensions/banana/scripts/banana.py
 ADD app.py app.py
 ADD server.py server.py
 
+COPY embeddings/ embeddings/
+
 CMD ["python", "server.py", "--xformers", "--disable-safe-unpickle", "--lowram", "--no-hashing", "--listen", "--port", "8000"]
